@@ -1,13 +1,36 @@
 <!doctype html>
 <html>
-	<head>
-		<title>bug maker</title>
-	</head>
+
+<head>
+	<title>bug maker</title>
+	{{#if showTests}}
+		<link rel="stylesheet" href="/vendor/mocha.css">
+	{{/if}}
+	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+</head>
+
 <body>
 
-<header>
-	<img src="/img/logo.png" alt="bug maker logo"> 
-</header>
-{{{body}}}
+	<header>
+		<img src="/img/logo.png" alt="bug maker logo">
+	</header>
+	{{{body}}}
+	{{#if showTests}}
+		<div id="mocha"></div>
+		<script src="/vendor/chai.js"></script>
+		<script src="/vendor/mocha.js"></script>
+		<script>
+			mocha.ui('tdd');
+			var assert = chai.assert();
+		</script>
+		<script src="/qa/tests-global.js"></script>
+		{{#if pageTestScript}}
+			<script src="{{pageTestScript}}"></script>
+		{{/if}}	
+		<script>mocha.run();</script>
+	{{/if}}
+	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+
 </body>
+
 </html>
