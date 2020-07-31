@@ -15,8 +15,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "grunt": "^1.2.1",
-    "grunt-cafe-mocha": "^0.1.13",
     "grunt-exec": "^3.0.0",
+    "grunt-mocha-test": "^0.13.3",
     "mocha": "^8.0.1",
     "zombie": "^6.1.4"
   }
