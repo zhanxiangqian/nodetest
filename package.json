@@ -17,7 +17,7 @@
     "grunt": "^1.2.1",
     "grunt-exec": "^3.0.0",
     "grunt-mocha-test": "^0.13.3",
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "zombie": "^6.1.4"
   }
 }
